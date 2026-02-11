@@ -1,0 +1,9 @@
+{
+  "name": "Ashama AI",
+  "description": "An interactive AI platform by Nawaz Nezif for exploring science, history, and technology in Afaan Oromo.",
+  "requestFramePermissions": [
+    "microphone",
+    "camera",
+    "geolocation"
+  ]
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashama AI - Newaz Nezif</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --oromo-black: #1a1a1a;
+            --oromo-red: #da291c;
+            --oromo-white: #ffffff;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f8fafc;
+            background-image: radial-gradient(#da291c11 0.5px, transparent 0.5px);
+            background-size: 24px 24px;
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #e2e8f0;
+            border-radius: 10px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #cbd5e1;
+        }
+    </style>
+    <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://esm.sh/@google/genai@^1.38.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "recharts": "https://esm.sh/recharts@^3.7.0"
+  }
+}
+</script>
+    <link rel="stylesheet" href="/index.css">
+</head>
+
+<body>
+    <div id="root"> </div>
+    <script type="module" src="/src/index.tsx"></script>
+
+    <!-- Theme Debug Script -->
+    <script>
+        console.log('🎨 Theme Debug: Checking CSS variables...');
+        setTimeout(() => {
+            const root = document.documentElement;
+            const primary = getComputedStyle(root).getPropertyValue('--color-primary');
+            const bg = getComputedStyle(root).getPropertyValue('--color-background');
+            console.log('CSS Variables:', { primary, background: bg });
+
+            if (!primary) {
+                console.warn('⚠️ CSS variables not set! Applying defaults...');
+                root.style.setProperty('--color-primary', '#DA291C');
+                root.style.setProperty('--color-background', '#FDFDFD');
+            }
+        }, 500);
+    </script>
+</body>
+
+</html>
